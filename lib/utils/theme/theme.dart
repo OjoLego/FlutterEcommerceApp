@@ -10,7 +10,6 @@ import 'package:flutter_ecommerce_app/utils/theme/custom_themes/text_theme.dart'
 
 class TAppTheme {
   TAppTheme._();  //so that this class is not used again and again, underscore is used
-
   //we have to now create static functions because constructor is private
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
