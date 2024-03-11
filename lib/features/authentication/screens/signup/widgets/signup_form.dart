@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter_ecommerce_app/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/sizes.dart';
@@ -55,8 +57,7 @@ class TSignupForm extends StatelessWidget {
           /// Email
           TextFormField(
             decoration: const InputDecoration(
-                labelText: TTexts.email,
-                prefixIcon: Icon(Iconsax.direct)),
+                labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct)),
           ),
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
@@ -65,8 +66,7 @@ class TSignupForm extends StatelessWidget {
           /// Phone number
           TextFormField(
             decoration: const InputDecoration(
-                labelText: TTexts.phoneNo,
-                prefixIcon: Icon(Iconsax.call)),
+                labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
           ),
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
@@ -95,7 +95,7 @@ class TSignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const VerifyEmailScreen()),
                 child: const Text(TTexts.createAccount)),
           )
         ],
@@ -103,4 +103,3 @@ class TSignupForm extends StatelessWidget {
     );
   }
 }
-
